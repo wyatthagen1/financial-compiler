@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1><%= title %></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to Financial Compiler</h2>
+            <p>Your intelligent financial document analysis system.</p>
+
+        </section>
+        <section>
+            <h2>Select Document Details</h2>
+            <form class="document-selector" method="POST" action="/">
+                <div class="form-group">
+                    <label for="docName">Document Name:</label>
+                    <input type="text" id="docName" name="docName" value="hood-10Q.pdf.json" required>
+                </div>
+                <div class="form-group">
+                    <label for="docType">Document Type:</label>
+                    <select id="docType" name="docType" required>
+                        <option value="10-Q">10-Q</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="companyName">Company Name:</label>
+                    <select id="companyName" name="companyName" required>
+                        <option value="Robinhood">Robinhood</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reportType">Report Type:</label>
+                    <select id="reportType" name="reportType" required>
+                        <option value="Balance Sheet">Balance Sheet</option>
+                        <option value="Income Statement">Income Statement</option>
+                        <option value="Statement of Cashflows">Statement of Cashflows</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">GO</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Financial Compiler. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
